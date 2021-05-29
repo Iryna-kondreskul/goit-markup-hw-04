@@ -4,9 +4,10 @@
   --titel-text-color: #757575;
   --title-fon-body-color: #e5e5e5;
   --accent-color: #2196f3;
-  --maket-color: #ececec;
+  --maket-color: #ffffff;
+  /* -color: #ececec; */
   --section-dark-color: #2f303a;
-  --color-main-button: #ffffff;
+  --color-main-button: ;
   --bac-color-buttons: #f5f4fa;
   --color-line: #c4c4c4;
   --color-footer-contact: #ffffff99;
@@ -44,7 +45,7 @@ img {
 
 /* в body задаем цвет странички и цвет шрифта, стиль шрифта */
 body {
-  background-color: var(--color-main-button);
+  background-color: var(--maket-color);
   color: var(--titel-text-color);
   font-family: Roboto, sans-serif;
   letter-spacing: 0.03em;
@@ -103,14 +104,14 @@ body {
 .header {
   /* outline: 2px solid red; */
   height: 80px;
-  border: 1px solid var(--maket-color);
+  border-bottom: 1px solid var(--maket-color);
 }
 
-.header::after {
+/* .header::after {
   content: "";
   width: 1600px;
   border: 1px solid var(--maket-color);
-}
+} */
 .header-container {
   display: flex;
   /* Центрирование по вспомогательной оси */
@@ -250,7 +251,7 @@ body {
 
   margin-bottom: 30px;
 
-  color: var(--color-main-button);
+  color: var(--maket-color);
 }
 /* Кнопка */
 .modal-btn {
@@ -261,7 +262,7 @@ body {
   display: flex;
   letter-spacing: 0.06em;
 
-  color: var(--color-main-button);
+  color: var(--maket-color);
   background-color: var(--accent-color);
 
   cursor: pointer;
@@ -279,8 +280,9 @@ body {
 }
 
 .section-icon-features {
-  background: var(--bac-color-buttons);
+  background: var(--maket-color);
   border-radius: 4px;
+  padding: 25px 0px;
 }
 
 .list-features:not(:last-child) {
@@ -300,7 +302,7 @@ body {
   display: flex;
   justify-content: center;
 
-  background: #f5f4fa;
+  background: var(--bac-color-buttons);
 }
 .section-icon-under-hero {
   margin-bottom: 33px;
@@ -357,10 +359,6 @@ body {
   margin-right: 30px;
 }
 
-.team-card {
-  padding-top: 30px;
-  padding-bottom: 30px;
-}
 .heading-name {
   margin-bottom: 10px;
   text-align: center;
@@ -370,20 +368,34 @@ body {
   margin-top: 10px;
 }
 
+.team-card {
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  margin-top: 20px;
+  /* width: 206px; */
+  height: 44px;
+}
 /* ----------------------------------------- */
 /* ul */
 .list-icon-soc-network {
-  margin: 20px;
   /* outline: 2px solid rgb(7, 209, 108); */
-  display: flex;
 
-  width: 206px;
-  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.icon-soc {
+  margin: 30px;
 }
 
+/* ширина для футер div. ul */
+.soc-network {
+  width: 206px;
+}
 /* li */
 .list-icon-item {
-  /* outline: 2px solid indigo; */
+  /* outline: 2px solid rgb(130, 15, 0); */
 
   width: 44px;
   height: 44px;
@@ -420,7 +432,7 @@ body {
 .link-icon-soc-work:hover .icon-social-network,
 .link-icon-soc-work:focus .icon-social-network,
 .link-icon-soc-work:active .icon-social-network {
-  fill: var(--color-main-button);
+  fill: var(--maket-color);
 }
 
 /* Постоянные клиенты */
@@ -481,8 +493,7 @@ body {
 }
 
 /* Стиль для заголовкой из секции "Наша команда" */
-.style-section-heading-team,
-.footer-h {
+.style-section-heading-team {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
@@ -511,7 +522,7 @@ body {
   color: var(--accent-color);
 }
 .logo-color {
-  color: var(--color-main-button);
+  color: var(--maket-color);
 }
 
 .footer-adres {
@@ -543,7 +554,7 @@ body {
 }
 
 .footer-link {
-  color: var(--color-main-button);
+  color: var(--maket-color);
 }
 
 .footer-info {
@@ -567,7 +578,7 @@ body {
 .footer-adresss {
   margin-right: px;
   padding: 0 auto;
-  outline: 2px solid #ffffff;
+  outline: 2px solid var(--maket-color);
 }
 
 .div {
@@ -576,11 +587,15 @@ body {
 }
 
 .footer-h {
-  color: var(--color-main-button);
+  color: var(--maket-color);
+  margin-bottom: 20px;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
 }
 
 .icon-footer-network {
-  fill: var(--color-main-button);
+  fill: var(--maket-color);
 }
 /* ul */
 .list-icon-soc-network {
@@ -618,7 +633,7 @@ body {
 .link-icon-footer:hover .icon-social-network,
 .link-icon-footer:focus .icon-social-network,
 .link-icon-footer:active .icon-social-network {
-  fill: var(--color-main-button);
+  fill: var(--maket-color);
 }
 /* ================================== END FOOTER ============================= */
 
@@ -633,7 +648,7 @@ body {
 
   /* прозрачность */
   /* background-color: transparent; */
-  background-color: var(--bac-color-buttons);
+  background-color: var(--maket-color);
   border-radius: 4px;
 
   color: var(--primary-text-color);
@@ -643,7 +658,9 @@ body {
 .filter-btn:focus,
 .filter-btn:hover {
   background-color: var(--accent-color);
-  color: var(--bac-color-buttons);
+  color: var(--maket-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 /* стиль для залоговков списков */
@@ -687,6 +704,11 @@ body {
 
   margin-left: -30px;
   margin-top: -30px;
+}
+
+.item-card:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 /* li */
